@@ -80,7 +80,6 @@ This system combines multiple approaches to classify companies into insurance ca
 
 1. **Parallel Processing**
    - Implement Map-Reduce paradigm
-   - Distributed computing with Dask/Spark
    - Batch processing optimization
 
 2. **Model Enhancements**
