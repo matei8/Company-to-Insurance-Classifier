@@ -1,7 +1,4 @@
 # Insurance Classification System
-
-A scalable system for classifying companies into insurance categories using NLP and deep learning techniques.
-
 ## Overview
 
 This system combines multiple approaches to classify companies into insurance categories:
