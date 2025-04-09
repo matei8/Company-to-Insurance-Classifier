@@ -7,7 +7,6 @@ A scalable system for classifying companies into insurance categories using NLP 
 This system combines multiple approaches to classify companies into insurance categories:
 
 - Sentence Transformers for semantic understanding
-- Separable CNN for efficient feature extraction
 - Cosine similarity for flexible matching
 - TF-IDF for traditional text analysis
 
@@ -27,7 +26,6 @@ This system combines multiple approaches to classify companies into insurance ca
 
 3. **Model Processing**
    - Load pre-trained sentence transformer
-   - Initialize SepCNN model with BERT-compatible dimensions
    - Pre-compute taxonomy label embeddings
    - Set similarity threshold (0.85)
 
@@ -48,13 +46,7 @@ This system combines multiple approaches to classify companies into insurance ca
    - Threshold-based matching with fallback mechanism
    - Handles ambiguous cases through top-k matching
 
-2. **Efficient Architecture**
-   - Depthwise separable CNN reduces parameters by ~90%
-   - Pre-computed embeddings for taxonomy labels
-   - GPU acceleration support
-   - Memory-efficient text processing
-
-3. **Robust Text Processing**
+2. **Robust Text Processing**
    - Combines multiple text fields (description, tags, category, niche)
    - Handles missing data gracefully
    - Normalization and cleaning for consistent input
@@ -73,13 +65,13 @@ This system combines multiple approaches to classify companies into insurance ca
 ### Current Implementation
 - Processes data sequentially
 - Memory usage scales with dataset size
-- GPU acceleration helps with model inference
 - Pre-computed embeddings reduce computation time
 
 ## Future Improvements
 
 1. **Parallel Processing**
    - Implement Map-Reduce paradigm
+   - Distributed computing with Dask/Spark
    - Batch processing optimization
 
 2. **Model Enhancements**
@@ -92,11 +84,11 @@ This system combines multiple approaches to classify companies into insurance ca
 
 ### Architecture Choices
 
-1. **Sentence Transformers + SepCNN:**
+1. **Sentence Transformers:**
    - Considered alternatives:
      - Pure BERT: Too resource-intensive for large-scale processing
      - Traditional ML (SVM, Random Forest): Limited semantic understanding
-     - Pure CNN: Higher parameter count, less efficient
+     - CNN: Higher parameter count, less efficient
 
 
 2. **Why Cosine Similarity?**
